@@ -1,4 +1,3 @@
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,7 +12,12 @@ public class Main {
     private static final ProductoRepositorio repositorio = new ProductoRepositorio();
     private static final Scanner teclado = new Scanner(System.in);
 
+    // Modo demostración (java Main --demo): repite en pantalla lo que se "escribe",
+    // para que la ejecución automática en GitHub se pueda leer completa.
+    private static boolean modoDemo = false;
+
     public static void main(String[] args) {
+        modoDemo = args.length > 0 && args[0].equals("--demo");
         int opcion;
         do {
             mostrarMenu();
@@ -143,7 +147,11 @@ public class Main {
     // Lee una línea de texto. Si la entrada se cierra, devuelve texto vacío.
     private static String leerTexto(String mensaje) {
         System.out.print(mensaje);
-        return teclado.hasNextLine() ? teclado.nextLine().trim() : "";
+        String texto = teclado.hasNextLine() ? teclado.nextLine().trim() : "";
+        if (modoDemo) {
+            System.out.println(texto);
+        }
+        return texto;
     }
 
     // Lee la opción del menú; si no es un número devuelve -1 (opción no válida).
@@ -153,7 +161,11 @@ public class Main {
             return 0; // Sin más entrada: se cierra el programa.
         }
         try {
-            return Integer.parseInt(teclado.nextLine().trim());
+            String texto = teclado.nextLine().trim();
+            if (modoDemo) {
+                System.out.println(texto);
+            }
+            return Integer.parseInt(texto);
         } catch (NumberFormatException e) {
             return -1;
         }
