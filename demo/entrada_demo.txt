@@ -1,0 +1,42 @@
+1
+P001
+Arroz
+Arroz blanco 1 kg
+4500
+20
+1
+P002
+Leche
+Leche entera 1 litro
+3200
+15
+1
+P001
+Otro
+Código repetido
+100
+1
+1
+P003
+Pan
+Pan tajado
+-100
+5
+2
+3
+P002
+4
+arroz
+5
+P001
+Arroz blanco 500 g
+4800
+
+6
+P002
+n
+6
+P002
+s
+2
+0

@@ -1,4 +1,3 @@
-package src;
 /**
  * MODELO: representa un producto de la tienda.
  *
