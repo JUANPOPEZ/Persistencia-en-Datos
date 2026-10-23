@@ -8,6 +8,8 @@ Aplicación de consola para registrar, consultar, actualizar y eliminar producto
 
 ![Ejecutar demostración](https://github.com/USUARIO/REPOSITORIO/actions/workflows/ejecutar.yml/badge.svg)
 
+[![Abrir y ejecutar](https://github.com/codespaces/badge.svg)](https://codespaces.new/JUANPOPEZ/Persistencia-en-Datos)
+
 Cada vez que se sube código al repositorio, GitHub Actions compila el proyecto y lo ejecuta solo, usando las respuestas de `demo/entrada_demo.txt`. Para ver el resultado: pestaña **Actions** → última ejecución → paso **Ejecutar la demostración automática** (o el resumen al final de la ejecución). También se puede lanzar manualmente con **Run workflow**.
 
 ## Estructura
